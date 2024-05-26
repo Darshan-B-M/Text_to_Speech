@@ -5,7 +5,10 @@ print("--->To Exit enter 'bye'")
 
 while True:
         str=input("Enter the text")
-        command =f"  PowerShell -Command \"Add-Type –AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('{str}');\""
+        
+        command =f"  PowerShell -Command \"Add-Type –AssemblyName System.Speech;    
+        (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('{str}');\""    #ms speech command line from stack overflow
+        
         os.system(command)
 
         if str=="bye":
